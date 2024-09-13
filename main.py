@@ -155,7 +155,8 @@ def simplify_expression(node):
 
     while change and iterations < iteration_limit:
         node, change = apply_simplification_rules(node)
-        print_tree(node)  
+        if change:  # Only print if a change occurred
+            print_tree(node)  
         iterations += 1
 
     if iterations == iteration_limit:
