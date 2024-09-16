@@ -169,11 +169,11 @@ def main():
     while True:
         initial_expression = input("enter a Boolean algebra expression that you would like to be parsed into a tree: ")
         parsed_tree = parse_boolean_expression(initial_expression)
-        print("heres the parsed Boolean expression tree:")
+        print("Parsed boolean expression tree below:")
         print_tree(parsed_tree)
-        print("simplifying the expression:")
+        print("Process: Simplifying the tree:")
         simplified_tree = simplify_expression(parsed_tree)
-        print("heres the simplified Boolean expression tree:")
+        print("Fully simplified tree below:")
         print_tree(simplified_tree)
         continue_choice = input("do you want to parse another expression? (y/n): ").strip().lower()
         if continue_choice != 'y':
