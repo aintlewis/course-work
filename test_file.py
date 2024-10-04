@@ -139,6 +139,7 @@ def apply_inverse_law(node):
                 return BooleanConst(value='0')
     return node
 
+
 # Double negation: !!A = A
 def apply_double_negation_law(node):
     if isinstance(node, BooleanNot) and isinstance(node.operand, BooleanNot):
@@ -146,16 +147,18 @@ def apply_double_negation_law(node):
     return node
 
 
+
+
+
+
 def simplify_expression(node):
     def apply_simplification_rules(node):
         original_node = node
-        
         node = apply_identity_law(node)
         node = apply_null_law(node)
         node = apply_idempotent_law(node)
         node = apply_inverse_law(node)
-        node = apply_double_negation_law(node)
-
+        node = apply_double_negation_law
         return node, node != original_node
 
     iteration_limit = 15
